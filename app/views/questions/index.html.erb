@@ -1,3 +1,15 @@
 <h1>This is my headline for Quiz 1.  The font is colored blue instead of black.</h1>
 
-<h1> <%= @questions.inspect %></h1>
+<hr/>
+
+
+<% @question.each do |question| %>
+<div class="booyah-box col-10 offset-1">
+    <h2>Note: <%=  question.note %></h2>
+    <h2>Rating: <%= question.rating %></h2>
+</div>
+
+<br/>
+<% end %>
+
+<%= link_to 'New Entry', new_question_path, class: 'btn btn-primary offset-1' %>

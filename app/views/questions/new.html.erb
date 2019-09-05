@@ -1,7 +1,8 @@
+<div class="booyah-box col-10 offset-1">
 <h1>Survey Goes Here</h1>
 
 <%= simple_form_for @question do |f| %>
-  <%= f.input :note %>
+  <%= f.input :note %> 
   <%= f.input :rating %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
 <% end %>
